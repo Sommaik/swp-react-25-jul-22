@@ -1,5 +1,9 @@
-import React from "react";
+import { FC, Fragment } from "react";
 import { Typography as Text, Button } from "@mui/material";
+import BigText from "./BigText";
+import TitleText from "./TitleText";
+import Parent from "./Parent";
+import AppContainer from "./AppContainer";
 
 const name = "Hello World";
 const sayName = (n?:string) => {
@@ -15,17 +19,28 @@ const showName = (n?:string) => {
     }
 }
 
-const elem = <React.Fragment>
-    
+const elem = <Fragment>
+
     <h1>{ sayName() }</h1>
     <Text variant="h3">Simple</Text>
     <Text variant="h3"> {sayName('Another Name') } </Text>
     <div>{ showName() }</div>
     <div>{ showName("Text Test") } </div>
+    <BigText text="I am BigText" code="" model={ {year:2022,day:1} } />  
+    <TitleText value="Title Text Test"/>
+    <Parent title="Parent Container">
 
-</React.Fragment> 
+        <TitleText value="Title Text from Parent" />
+    </Parent>
 
-const HelloWorld: React.FC = () => {
+    <AppContainer>
+        <TitleText value="Title Text from AppContainer" />
+
+    </AppContainer>
+
+</Fragment> 
+
+const HelloWorld: FC = () => {
     return elem
 }
 
