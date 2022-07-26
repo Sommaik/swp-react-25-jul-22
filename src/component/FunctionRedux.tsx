@@ -5,7 +5,7 @@ import { ISample } from '../model/ISample'
 import { RootState } from "../app/store";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { increment } from "../app/counter-slice";
+import { increment } from "../app/slice/counter-slice";
 
 interface IModel
 {

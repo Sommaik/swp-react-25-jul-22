@@ -2,7 +2,7 @@ import React, { ReactNode }  from "react";
 import { Typography as Text, Button } from '@mui/material';
 
 //=================================================================
-import { increment } from '../app/counter-slice';
+import { increment } from '../app/slice/counter-slice';
 import { connect, ConnectedProps } from 'react-redux';
 
 type Props = { value: string;}

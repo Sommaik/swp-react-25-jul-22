@@ -8,6 +8,7 @@ import HelloWorld from './component/HelloWorld';
 import BlogPost from './pages/BlogPost';
 import ProtectedRoute from './component/ProtectedRoute';
 import Member from './component/Member';
+import PostPage from './pages/PostPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 </ProtectedRoute>
             }/>
             <Route path='/member' element={<Member/>}/>
+            <Route path='/postData' element={<PostPage/>}/>
         </Routes>
     </BrowserRouter>
   );
