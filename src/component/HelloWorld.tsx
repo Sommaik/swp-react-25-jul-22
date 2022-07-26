@@ -7,6 +7,9 @@ import TitleText from './TitleText';
 import Parent from './Parent';
 import AppContainer from './AppContainer';
 
+import ActionRedux from './ActionRedux';
+import FunctionRedux from './FunctionRedux';
+
 //==========================================================================
 const name = "Hello World";
 const element = <>
@@ -79,8 +82,18 @@ const appConEle = <Fragment>
 </AppContainer>
 </Fragment>
 
+//==========================================================================
+/*const actCompEle = <Fragment>
+<ActionRedux value="0"/>
+</Fragment>*/
+
+//==========================================================================
+const fncReduxEle = <Fragment>
+<FunctionRedux text='su' code='admin' model={{year:2022, day:1}} sample={{year:2022, day:1}}/>
+</Fragment>
+
 const HelloWorld: React.FC = () => {
-    return (titleTextEle);
+    return (fncReduxEle);
 }
 
 export default HelloWorld;
