@@ -34,6 +34,10 @@ class TitleText extends Component<Props, State> {
             </Button>
         </>
     }
+
+    componentDidMount(): void {
+        console.log("when after create");
+    }
 }
 
 export { TitleText };

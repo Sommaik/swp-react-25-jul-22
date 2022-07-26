@@ -4,6 +4,7 @@ import { BigText } from './BigText';
 import { TitleText } from './TitleText';
 import { Parent } from './Parent';
 import { AppContainer } from './AppContainer';
+import { IncrementButton } from './IncrementButton';
 
 const sayName = (n: string) => {
     return "This is your " + n;
@@ -28,11 +29,11 @@ const elem = <>
     <Parent title='Parent Container'>
         <TitleText value='Child Btn'/>
     </Parent>
+    <IncrementButton text='Sawasdee' code='' model={{year: 2022, day: 219}}/>
     <AppContainer/>
     <AppContainer>
         <TitleText value='Hello'></TitleText>
     </AppContainer>
-
     {
         arr.map((v) => {
             return <h2 key={v}>{v}</h2>
