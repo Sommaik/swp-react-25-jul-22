@@ -9,13 +9,15 @@ interface IProtect
 
 const ProtectedRoute: FC<IProtect> = ({ isLoggedId, children }) =>
 {
+    let output;
     if (!isLoggedId)
     {
-        return <Navigate to="/hello" replace />;
+        output = <Navigate to="/hello" replace />;
     } else
     {
-        return <>{children}</>;
+        output = <>{children}</>;
     }
+    return output;
 }
 
 export default ProtectedRoute;

@@ -7,6 +7,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import HelloWorld from './component/HelloWorld';
 import BlogPost from './pages/BlogPost';
 import ProtectedRoute from './component/ProtectedRoute';
+import Member from './component/Member';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                     <BlogPost/>
                 </ProtectedRoute>
             }/>
+            <Route path='/member' element={<Member/>}/>
         </Routes>
     </BrowserRouter>
   );
