@@ -1,5 +1,9 @@
 import { Component, ReactNode } from "react";
 import { Button } from "@mui/material";
+import { RootState } from "../app/store";
+import { increment } from "../app/counter-slice";
+import { connect } from "react-redux";
+import { ConnectedProps } from "react-redux";
 
 type Props = {
   value: string;
@@ -9,6 +13,16 @@ type State = {
   cnt: number;
 };
 
+const mapState = (state: RootState, ownState?: Props) => {
+  return { cnt: state.counter.value, value: ownState?.value };
+};
+
+const mapDispatch = {
+  increment,
+};
+
+// type PropFromRedux = ConnectedProps<typeof connector>;
+
 class TitleText extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -16,9 +30,9 @@ class TitleText extends Component<Props, State> {
   }
 
   onClick(): void {
-    this.setState((state, props) => ({
-      cnt: state.cnt + 1,
-    }));
+    // this.setState((state, props) => ({
+    //   cnt: state.cnt + 1,
+    // }));
   }
 
   onTextChage(event: any): void {
@@ -41,6 +55,12 @@ class TitleText extends Component<Props, State> {
       </>
     );
   }
+
+  componentDidMount(): void {
+    console.log("when after create");
+  }
 }
+
+const connector = connect(mapState, mapDispatch);
 
 export default TitleText;
