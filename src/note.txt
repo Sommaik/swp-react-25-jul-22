@@ -1,3 +1,19 @@
 git branch A01
 git checkout A01
 git remote add origin https://github.com/Sommaik/swp-react-25-jul-22
+
+
+//
+
+https://react-redux.js.org
+https://reactrouter.com/
+
+// authen by JWT
+jwt.io
+
+// json example dummy
+https://jsonplaceholder.typicode.com/
+
+// Unit Test
+jestjs.io
+

@@ -1,6 +1,7 @@
 import { FC, Fragment } from "react";
 import { Typography as Text, Button } from "@mui/material";
 import BigText from "./BigText";
+import BigText2 from "./BigText2";
 import TitleText from "./TitleText";
 import Parent from "./Parent";
 import AppContainer from "./AppContainer";
@@ -27,6 +28,7 @@ const elem = <Fragment>
     <div>{ showName() }</div>
     <div>{ showName("Text Test") } </div>
     <BigText text="I am BigText" code="" model={ {year:2022,day:1} } />  
+    <BigText2 text="I am BigText" code="" model={ {year:2022,day:1} } />  
     <TitleText value="Title Text Test"/>
     <Parent title="Parent Container">
 
