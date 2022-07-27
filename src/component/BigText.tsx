@@ -4,7 +4,7 @@ import { IBigText } from "../model/IBigText";
 import { useSelector } from "react-redux";
 import { RootState } from "../app/store";
 import { useDispatch } from "react-redux";
-import { increment } from "../app/counter-slice";
+import { increment } from "../app/slice/counter-slice";
 
 const BigText: FC<IBigText> = (props) => {
   const value = useSelector((state: RootState) => state.counter.value);

@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import BlogPost from "./page/BlogPost";
 import ProtectedRoute from "./page/ProtectedRoute";
 import Member from "./page/Member";
+import Post from "./page/Post";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           }
         />
         <Route path="/member" element={<Member />} />
+        <Route path="/post" element={<Post />} />
       </Routes>
     </Router>
   );

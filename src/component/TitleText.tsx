@@ -1,7 +1,7 @@
 import { Component, ReactNode } from "react";
 import { Button } from "@mui/material";
 import { RootState } from "../app/store";
-import { increment } from "../app/counter-slice";
+import { increment } from "../app/slice/counter-slice";
 import { connect } from "react-redux";
 import { ConnectedProps } from "react-redux";
 
